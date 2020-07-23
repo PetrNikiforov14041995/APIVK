@@ -1,17 +1,18 @@
 # нужно сделать class и реализовать в нем метод поиска общих друзей
 import requests
 
-token = '958eb5d439726565e9333aa30e50e0f937ee432e927f0dbd541c541887d919a7c56f95c04217915c32008'
-# user_id = input()
+TOKEN = '958eb5d439726565e9333aa30e50e0f937ee432e927f0dbd541c541887d919a7c56f95c04217915c32008'
+user_id = input()
 class User:
-    def __init__(self, token):
-        self.token = token
+    def __init__(self, user_id):
+        self.user_id = user_id
 
     def get_status(self):
         response = requests.get(
-            'https://api.vk.com/method/account.getProfileInfo',
+            'https://api.vk.com/method/friends.get',
             params = {
-                'access_token': token,
+                'access_token': TOKEN,
+                'user_id': user_id,
                 'v': 5.21
             }
         )
@@ -29,6 +30,6 @@ class User:
     #     )
     #     return response.json()    
     
-vakson = User(token)
+vakson = User(user_id)
 print(vakson.get_status())
 # print(vakson.friends())
