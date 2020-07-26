@@ -1,0 +1,5 @@
+https://oauth.vk.com/authorize?client_id=7542757&scope=photos,audio,video,docs,notes,pages,status,offers,questions,wall,groups,friends,email,notifications,stats,ads,offline,docs,pages,stars,notifications&response_type=token
+
+TOKEN=949c061174e5048eb7cbba8550186fb2f269c5c27843a90c9f0eb70ab7305fdfc5cc5b18db4f707b1d79c
+ID_my = 47526429
+ID_Kol = 72773511
